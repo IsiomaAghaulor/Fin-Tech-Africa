@@ -6,6 +6,8 @@ import About from './component/About';
 import ContactUs from './component/ContactUs';
 import Error from './component/Error';
 import List from './component/List'; 
+import Hero from './component/Hero/Hero';
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     <div className="App">
     <>
     <List />
+    <Hero />
     
     <Routes>
     
