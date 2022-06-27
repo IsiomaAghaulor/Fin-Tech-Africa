@@ -7,7 +7,7 @@ import {
 
 const Dashboard = lazy(() => import("../pages/dashboard"));
 const Landing = lazy(() => import("../pages/landingpage"));
-const Signup = lazy(() => import("../pages/Signup"));
+const Signup = lazy(() => import("../pages/signup"));
 const Login = lazy(() => import("../pages/login"));
 
 export const Routes = () => {
