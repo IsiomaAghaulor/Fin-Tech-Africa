@@ -18,7 +18,7 @@ export const TransactionList = () => (
         </div>
       </div>
       <div className="frank">
-        <p>N2000.00</p>
+        <p>N2,000.00</p>
       </div>
     </div>
   </div>

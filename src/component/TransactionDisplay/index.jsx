@@ -6,6 +6,7 @@ import { ReactComponent as Vec } from "./images/Vector.svg";
 
 export const TransactionDisplay = () => (
   <div className="transaction--head">
+    <div className="wallet-and-body" style={{display: "flex"}}>
     <div className="wallet">
       <Group className="wallet-group"/>
     </div>
@@ -18,6 +19,9 @@ export const TransactionDisplay = () => (
         956937598375
       </p>
     </div>
-    <Eye />
+    </div>
+    <div className="eye-image">
+      <Eye />
+    </div> 
   </div>
 );
