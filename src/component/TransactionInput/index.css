@@ -1,0 +1,22 @@
+.search-container {
+    display: flex;
+    background-color:#FFFFFF;
+    width: 697px;
+    margin: auto;
+    align-items: center;
+    height: 48px;
+    border-radius: 6px;
+    padding:  0px 20px ;
+    border: 1px solid #C4C4C4;
+    margin-top: 20px;
+}
+    
+
+
+.input{
+   
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,45 @@
+.note{
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.04);
+    color: #012A4A;
+    width: 697px;
+    margin: auto;
+    align-items: center;
+    height: 48px;
+    border-radius: 6px;
+    padding:  0px 20px ;
+    border: 1px solid #C4C4C4;
+    margin-top: 20px;
+}
+.mother{
+    display: flex;
+    border: 1px;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 697px;
+    padding: 32px 0px;
+    justify-content: space-between;
+}
+.frank{
+    align-items: flex-end;
+}
+.list{
+    display: flex;
+    align-items: center;
+}
+.name-tag{
+    text-align: left;
+    margin-left: 10px;
+    min-width: 150px;
+}
+.bank{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    margin-top: 7px;
+}
+.bank > *{
+    
+}
+/* .nametag */

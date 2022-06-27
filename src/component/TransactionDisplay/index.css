@@ -1,0 +1,45 @@
+
+
+.transaction--head{
+    background-color: #e7e7e7e7;
+    width: 697px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 206px;
+    flex-direction: row;
+    color: #012A4A;
+}
+.transaction-body{
+    text-align: left;
+    padding-left: 3px;
+    margin-left: 10px; 
+}
+/* .transaction-currency{
+    display: flex;
+} */
+.wallet{
+    display: flex;
+    align-content: center;
+    width: 67px;
+    background:  #4361EE0D;
+    height: 68px;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+
+
+}
+.wallet-group{
+    align-self: center;
+    left: 14.75%;
+    right:32.04%;
+    top: 5.57%;
+    bottom:67.48%;
+    margin: 0 auto;
+
+}

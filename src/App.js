@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <>
-        <List />
-        <Hero />
+        {/* <List /> */}
+        {/* <Hero /> */}
 
         <Routes>
           <Route exact path="/" element={<Home />} />

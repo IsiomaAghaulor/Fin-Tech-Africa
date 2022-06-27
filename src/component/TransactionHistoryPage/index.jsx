@@ -1,12 +1,11 @@
 import React from "react";
-import { TransactionDisplay } from "../TransactionDisplay/index";
-import { TransactionBtn } from "../TransactionBtn/index";
-import { TransactionInput } from "../TransactionInput/index";
-import { TransactionList } from "../TransactionList/index";
+import { TransactionDisplay } from "../TransactionDisplay";
+import { TransactionBtn } from "../TransactionBtn";
+import { TransactionInput } from "../TransactionInput";
+import { TransactionList } from "../TransactionList";
 
 
-const index = () => {
-  return (
+const index = () => (
     <div>
       <TransactionDisplay />
       <TransactionBtn />
@@ -14,6 +13,6 @@ const index = () => {
       <TransactionList />
     </div>
   );
-};
+
 
 export default index;
