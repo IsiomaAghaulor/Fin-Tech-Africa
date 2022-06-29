@@ -30,6 +30,19 @@
     margin-bottom: 10px;
 }
 
+
+.contentBox p{
+    /* font-weigth:100px; */
+    font-size:0.1em;
+    margin-top:1em 0;
+    font-family:'Poppins', sans-serif;
+}
+.btnBox{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+
 .heroImgContainer{
     display: flex;
     justify-content: end;

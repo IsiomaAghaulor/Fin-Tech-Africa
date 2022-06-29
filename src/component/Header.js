@@ -4,7 +4,7 @@ import "./Css/ListStyle.css";
 import Button from "./Button";
 import CustomNav from "./CustomNav/CustomNav";
 
-const List = () => {
+const Header = () => {
   return (
     <>
       <header>
@@ -76,4 +76,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default Header;

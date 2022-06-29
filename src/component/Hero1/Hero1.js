@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../Button";
 import HeroImg from "../images/heroImg.png";
-import "../Hero.css";
+import "../Hero1.css";
 
-const Hero = () => {
+const Hero1 = () => {
   return (
     <>
       <div className="heroSection">
@@ -27,4 +27,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero1;

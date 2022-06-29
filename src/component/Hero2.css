@@ -1,0 +1,101 @@
+.hero2Section{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color:#ffffff;
+    /* padding: 0 2rem 0 0; */
+}
+
+.hero2Section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3em;
+    flex: 1;
+}
+
+.hero2Section-left-header-text {
+    font-family: "Inter";
+    color: #3A0CA3;
+    font-weight: 700; 
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.hero2ImgContainer img{
+    display: flex;
+    justify-Content:grid;
+}
+
+ .hero2ImgContainer{
+    display: flex;
+    padding: 1em;
+    flex: 1;
+}
+
+.hero2Section-left-secondary-text {
+    font-weight: 400;
+    font-family: Inter;
+    color: #012A4A;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.hero2ImgContainer1{
+display: flex;
+justify-content:space-around;
+}
+
+.hero2ImgContainer2{
+    display:flex;
+}
+
+.icon_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.icon_container > .sub_container{
+    width: 50%;
+    height: 80px;
+    
+    /* justify-content: center; */
+    
+
+}
+
+.icon_container > .sub_container > .item {
+    width: 50%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon_container > .sub_container > .item:hover {
+    background-color: #E5E5E5;
+    color: #ffffff
+}
+
+.icon_container > .sub_container > .item  > img {
+    width: 12px;
+    margin-bottom: 0.7rem;
+}
+
+.icon_container >  .sub_container > .item  > p {
+    font-size: 0.4rem;
+    color: #012A4A;
+}
+
+.icon_container > .sub_container > .item-footer {
+    /* margin-top: 5rem; */
+}
+
+
+
+ 
