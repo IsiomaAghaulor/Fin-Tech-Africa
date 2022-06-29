@@ -3,23 +3,25 @@ import "./index.css";
 import { ReactComponent as FirstBank } from "./images/newfirstb.svg";
 
 export const TransactionList = () => (
-  <div>
-    <p className="note">Transaction history</p>
+  <div >
+    <div className="note-tag">
+      <p>Transaction history</p>
+    </div>
     <div className="mother">
-      <div className="list">
+      <div className="left">
         <FirstBank />
-
-        <div className="name-tag">
-          <p>Victor Ambibola </p>
-          <div className="bank">
-            <p>First Bank</p>
-            <span>2:00PM</span>
+      <div className="transaction-history-middle">
+          <p>Victor Abimbola</p>
+          <div className="transaction-history-bottom">
+            <p>GTB</p>
+            <p>2:00PM</p>
           </div>
-        </div>
       </div>
-      <div className="frank">
+      </div>
+      <div className="transaction-history-right">
         <p>N2,000.00</p>
       </div>
     </div>
   </div>
 );
+

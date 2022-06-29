@@ -14,7 +14,6 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 40px 10px;
     align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -27,9 +26,6 @@
     padding-left: 10px;
     margin-left: 10px; 
 }
-/* .transaction-currency{
-    display: flex;
-} */
 .wallet{
     display: flex;
     align-content: center;
@@ -40,13 +36,15 @@
     top: 0px;
     border-radius: 8px;
     margin-left: 20px;
+    margin-top: 50px;
+    
 }
 .wallet-group{
     align-self: center;
-    left: 14.75%;
-    right:32.04%;
-    top: 5.57%;
-    bottom:67.48%;
+    left: 64.75%;
+    right:27.04%;
+    top: 54.57%;
+    bottom:37.48%;
     margin: 0 auto;
 
 }

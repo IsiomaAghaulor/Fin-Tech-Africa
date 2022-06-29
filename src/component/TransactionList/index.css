@@ -1,16 +1,46 @@
-.note{
+/* .note{
     display: flex;
+    border: 1px solid #C4C4C4;
+    width: 697px;
+    height: 48px;
+    margin: auto;
     background-color:rgba(0, 0, 0, 0.04);
+   
+} */
+/* display: flex;
+    color: #012A4A;
+    align-items: center;
+    margin-top: 20px; */
+
+
+.note-tag > p {
+    display: flex;
+    align-items: center;
     color: #012A4A;
     width: 697px;
-    margin: auto;
-    align-items: center;
     height: 48px;
-    border-radius: 6px;
-    padding:  0px 20px ;
-    border: 1px solid #C4C4C4;
+    margin: auto;
     margin-top: 20px;
+    padding-left: 10px;
+    background: rgba(0, 0, 0, 0.04);
+    
+
 }
+/* .note-tag{
+    display: flex;
+    color: #012A4A;
+    align-items: center;
+    padding-left: 10px;
+    flex-direction: row;
+    justify-content:flex-start;
+} */
+.name--tag{
+    display: flex;
+   flex-direction: column;
+   
+    /* min-width: 150px; */
+}
+
 .mother{
     display: flex;
     border: 1px;
@@ -18,28 +48,60 @@
     align-items: center;
     margin: auto;
     width: 697px;
-    padding: 32px 0px;
+    /* padding: 0px 10px; */
+    /* border: 1px solid #C4C4C4; */
     justify-content: space-between;
 }
-.frank{
+
+
+.frank{ 
     align-items: flex-end;
+    justify-content: flex-end;
+    color: green;
 }
-.list{
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.transaction-history-middle {
+    margin-top: .5rem;
+
+}
+
+.transaction-history-middle  p{
+    color: #012A4A;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin: .2rem;
+}
+
+.transaction-history-bottom{
     display: flex;
     align-items: center;
 }
-.name-tag{
-    text-align: left;
-    margin-left: 10px;
-    min-width: 150px;
+
+.transaction-history-bottom p{
+    color: #979797;
+    font-size: 15px;
+}
+
+.transaction-history-right  p{
+    color: #34A853;
+    font-size: 15px;
+    padding-right: .5rem;
+}
+/* 
+.list{
+    display: flex;
+    align-items: center;
 }
 .bank{
     display: flex;
     justify-content: space-between;
     color: grey;
     margin-top: 7px;
-}
-.bank > *{
-    
-}
-/* .nametag */
+} */
