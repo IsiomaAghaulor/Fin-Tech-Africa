@@ -3,7 +3,7 @@ import './index.css';
 
 export const TransactionBtn = () => (
     <div className='TransactionBtn'>
-        <p className='transfer'>Transfer</p>
-        <p className='profile'> Profile</p>
+        <button className='transfer'>Transfer</button>
+        <button className='profile'> Profile</button>
     </div>
 );
