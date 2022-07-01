@@ -1,5 +1,5 @@
 import React from "react";
-import Logo3 from "./images/cardtocash.png";
+import CardToCashImg from "../../images/cardtocash.png";
 import "./Hero3.css";
 
 const Hero3 = () => {
@@ -9,7 +9,7 @@ const Hero3 = () => {
 
       <div>
           <div className="hero3ImgContainer">
-            <img src={Logo3} alt="heroImg" />
+            <img src={CardToCashImg} alt="heroImg" />
           </div>
         </div>
 

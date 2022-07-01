@@ -1,9 +1,9 @@
 import React from "react";
-import Logo1 from "../images/free.png";
-import Logo2 from "../images/secrecy.png";
-import Logo3 from "../images/security.png";
-import Logo4 from "../images/transaction.png";
-import "../Hero2.css";
+import Free from "../../images/free.png";
+import Secrecy from "../../images/secrecy.png";
+import Security from "../../images/security.png";
+import Transaction from "../../images/transaction.png";
+import "./Hero2.css";
 
 const Hero2 = () => {
   return (
@@ -22,14 +22,14 @@ const Hero2 = () => {
         <div className="icon_container">
           <div className="sub_container">
             <div className="item">
-              <img src={Logo1} alt="heroImg" />
-              <p> keeping <br/>secr ecy</p>
+              <img src={Free} alt="heroImg" />
+              <p> keeping <br/>secrecy</p>
             </div> 
           </div>         
           
           <div className="sub_container">
-            <div className="item">
-              <img src={Logo2} alt="heroImg" />
+            <div className="item item-footer">
+              <img src={Secrecy} alt="heroImg" />
               <p> convenient <br/>transaction</p>
             </div>
           </div>
@@ -37,7 +37,7 @@ const Hero2 = () => {
 
           <div className="sub_container">
             <div className="item item-footer">
-              <img src={Logo3} alt="heroImg" />
+              <img src={Security} alt="heroImg" />
               <p>Free <br/>transaction</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Hero2 = () => {
 
           <div className="sub_container">
             <div className="item item-footer">
-              <img src={Logo4} alt="heroImg" />
+              <img src={Transaction} alt="heroImg" />
               <p>Security <br/>guaranteed</p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../Button";
-import HeroImg from "../images/heroImg.png";
-import "../Hero1.css";
+import Button from "../Button/Button";
+import FintechGuy from "../../images/fintechimgguy.png";
+import "./Hero1.css";
 
 const Hero1 = () => {
   return (
@@ -19,7 +19,7 @@ const Hero1 = () => {
         </div>
         <div>
           <div className="heroImgContainer">
-            <img src={HeroImg} alt="heroImg" />
+            <img src={FintechGuy} alt="heroImg" />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
  import {FaTwitter} from 'react-icons/fa';
 import {FaLinkedinIn} from 'react-icons/fa'
 import {FaGoogle} from 'react-icons/fa';
-import CustomNav from "./CustomNav/CustomNav";
+import CustomNav from "../CustomNav/CustomNav";
 import  './footer.css';
 
  
@@ -16,12 +16,14 @@ const Footer = () => {
         <div>
             <h4>Fintech.africa</h4>
         </div>
-        <div className="footerNavs">
-        <CustomNav path='/'>Home</CustomNav>
-                <CustomNav path='/features'>Features</CustomNav>
-                <CustomNav path='/about'>About</CustomNav>
-                <CustomNav path='/contactUs'>Contact Us</CustomNav>
-                </div>
+
+        <nav className='footerNavs'>
+          <CustomNav color="white" path='/'>Home</CustomNav>
+          <CustomNav color="white" path='/features'>Features</CustomNav>
+          <CustomNav color="white" path='/about'>About Us</CustomNav>
+          <CustomNav color="white" path='/contactUs'>Contact Us</CustomNav>
+        </nav>
+        
                 
         <div className='icons'>
             <FaFacebookF className='icon'/>
@@ -40,11 +42,11 @@ const Footer = () => {
         </div>
 
         <div className='privacy-policy'>
-        <div><p>Privacy Policy</p></div>
-            <div><p>Privacy Policy</p></div>
-           <div><p>Terms of Condition</p></div> 
-            <div><p>Legal</p></div>
-            <div><p>Help</p></div>
+          <div><p>Privacy Policy</p></div>
+              <div><p>Privacy Policy</p></div>
+            <div><p>Terms of Condition</p></div> 
+              <div><p>Legal</p></div>
+              <div><p>Help</p></div>
         </div>
 
         <div className='version'>
