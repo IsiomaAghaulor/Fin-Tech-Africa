@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./index.css";
 
 export const TransactionBtn = () => {
@@ -10,7 +11,8 @@ export const TransactionBtn = () => {
   return (
     <div className="TransactionBtn">
       
-        <button onClick={() => navigate("/")} className="transfer">Transfer</button>
+        <button onClick={() => navigate("/signup")} className="transfer">Transfer</button>
+        
   
       <button className="profile"> Profile</button>
     </div>

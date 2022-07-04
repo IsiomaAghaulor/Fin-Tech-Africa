@@ -1,27 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
-import { ReactComponent as Eye } from "./images/Eye.svg";
-import { ReactComponent as Group } from "./images/Group.svg";
-import { ReactComponent as Vec } from "./images/Vector.svg";
+import { BsEye, BsWallet2 } from "react-icons/bs";
+import { MdSwitchAccount} from "react-icons/md";
+import { dashboardData } from "../../data";
 
-export const TransactionDisplay = () => (
+export const TransactionDisplay = () => {
+  const [showBalance, setShowBalance] = useState(false)
+
+   const toggleBalance = () => {
+    setShowBalance(showBalance ? false : true);
+    console.log(showBalance)
+   }
+
+  return (
   <div className="transaction--head">
     <div className="wallet-and-body" style={{display: "flex"}}>
     <div className="wallet">
-      <Group className="wallet-group"/>
+      <BsWallet2 className="wallet-group"/>
     </div>
     <div className="transaction-body">
       <p>Account Balance</p>
-      <h1>N2,000,000</h1>
-      <p>Wema Bank</p>
+      <h1>{`${showBalance ? "*******" :dashboardData.amount}`}</h1>
+      <p>{dashboardData.bank}</p>
       <p>
-        <Vec style={{ marginRight: "10px" }} />
-        956937598375
+        <MdSwitchAccount style={{ marginRight: "10px" }} />
+       {dashboardData.accountNumber}
       </p>
     </div>
     </div>
     <div className="eye-image">
-      <Eye />
+      <BsEye  style={{cursor: "pointer"}} onClick={toggleBalance}/>
     </div> 
   </div>
-);
+  )
+  };
