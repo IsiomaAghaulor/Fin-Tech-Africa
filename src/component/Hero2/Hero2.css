@@ -1,0 +1,78 @@
+.hero2Section{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color:#ffffff;
+    /* padding: 0 2rem 0 0; */
+}
+
+.hero2Section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3em;
+    flex: 1;
+}
+
+.hero2Section-left-header-text {
+    font-family: "Inter";
+    color: #3A0CA3;
+    font-weight: 700; 
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.icon_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.icon_container > .sub_container{
+    width: 50%;
+    height: 80px;
+    
+    
+
+}
+
+.icon_container > .sub_container > .item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon_container > .sub_container > .item  > p {
+    text-align: center;
+}
+
+.icon_container > .sub_container > .item:hover {
+    background-color: #E5E5E5;
+    color: #ffffff
+}
+
+.icon_container > .sub_container > .item  > img {
+    width: 12px;
+    margin-bottom: 0.7rem;
+
+    
+    
+}
+
+.icon_container >  .sub_container > .item  > p {
+    font-size: 0.4rem;
+    color: #012A4A;
+}
+
+
+
+
+
+ 

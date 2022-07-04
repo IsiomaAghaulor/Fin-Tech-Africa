@@ -1,0 +1,55 @@
+
+.heroSection{
+    display: flex;
+    background: linear-gradient(90deg, #D8F3DC, #FFEEDD, #D8BBFF);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heroSection-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3em;
+}
+
+.heroSection-left-header-text {
+    font-family: "Inter";
+    color: #3A0CA3;
+    font-weight: 700;
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.heroSection-left-secondary-text {
+    font-weight: 400;
+    font-family: Inter;
+    color: #012A4A;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.contentBox p{
+    /* font-weigth:100px; */
+    font-size:0.1em;
+    margin-top:1em 0;
+    font-family:'Poppins', sans-serif;
+}
+.btnBox{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.heroImgContainer{
+    display: flex;
+    justify-content: end;
+    padding: 1em;
+}
+.heroImgContainer img{
+    height: auto;
+    width: 15rem;
+    object-fit: contain;
+}

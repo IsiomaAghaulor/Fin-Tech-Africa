@@ -1,0 +1,48 @@
+.hero3Section{
+    display: flex;
+    background: rgb(236, 231, 231);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero3Section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3em;
+}
+
+.hero3Section-right-header-text {
+    font-family: "Inter";
+    color: #3A0CA3;
+    font-weight: 700;
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.hero3Section-right-secondary-text {
+    font-weight: 400;
+    font-family: Inter;
+    color: #012A4A;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.contentBox p{
+    font-size:0.1em;
+    margin-top:1em 0;
+    font-family:'Poppins', sans-serif;
+}
+
+.hero3ImgContainer{
+    display: flex;
+    justify-content: end;
+    padding: 1em;
+}
+.hero3ImgContainer img{
+    height: auto;
+    width: 15rem;
+    object-fit: contain;
+}
