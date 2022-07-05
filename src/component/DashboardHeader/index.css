@@ -1,0 +1,32 @@
+.dashboard{
+    display: flex;
+    background-color:#E5E5E5;
+    color: #012A4A;
+    margin: auto;
+    align-items: center;
+    height: 96px;
+    justify-content: space-between;
+    border: 1px solid #E5E5E5;
+
+}
+.dashboard-text{
+    display: flex;
+    margin-left: 146px;
+
+}
+.dashboard-images{
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.sideBadge{
+    margin-left: -12px;
+    position: absolute;
+    top: 30px;
+
+
+}
+.atBell{
+    position: relative;
+}

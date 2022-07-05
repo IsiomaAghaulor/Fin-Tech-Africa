@@ -38,7 +38,7 @@
 
 .hero3ImgContainer{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 1em;
 }
 .hero3ImgContainer img{

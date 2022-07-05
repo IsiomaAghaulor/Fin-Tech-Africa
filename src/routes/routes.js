@@ -1,14 +1,12 @@
-import { lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes as RouterCover,
   Route,
 } from "react-router-dom";
-
-const Dashboard = lazy(() => import("../pages/dashboard"));
-const Landing = lazy(() => import("../pages/landingpage"));
-const Signup = lazy(() => import("../pages/signup"));
-const Login = lazy(() => import("../pages/login"));
+import Signup from "../pages/signup";
+import Dashboard from "../pages/dashboard";
+import Landing from "../pages/landingpage";
+import Login from"../pages/login";
 
 export const Routes = () => {
     //TODO protect the dashboard route.
