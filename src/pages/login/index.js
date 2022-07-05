@@ -3,9 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/Context";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckSquare, faUserLock } from "@fortawesome/fontawesome-free-solid";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import "./login.css";
 
@@ -17,7 +15,7 @@ const Login = () => {
   const { dispatch } = useContext(AuthContext);
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
-  const [isSubmit, setIsSubmit] = useState(false);
+  const [, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +35,6 @@ const Login = () => {
   // }, [] )
 
   const validate = (values) => {
-    const errors = {};
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const validEmail = regex.test(values.email);
@@ -108,7 +105,7 @@ const Login = () => {
             </div>
           </div>
 
-          <a href="#" className="app__forgotPassword">
+          <a href="/forgot-password" className="app__forgotPassword">
             Forgot password?
           </a>
 
@@ -120,7 +117,7 @@ const Login = () => {
         </form>
         <span>
           Don't have an accout?{" "}
-          <a href="#" className="app__create-account">
+          <a href="/create-account" className="app__create-account">
             create an account
           </a>
         </span>
