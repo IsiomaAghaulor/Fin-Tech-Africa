@@ -46,8 +46,24 @@
     top: 54.57%;
     bottom:37.48%;
     margin: 0 auto;
+    font-size: 2rem;
 
+}
+.account{
+    font-size: 1.5rem;
+    padding-right: 15px;
+    
 }
 .eye-image{ 
     margin-right: 40px;
+}
+
+.icons{
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.row-effect{
+    display: flex;
+    align-items: center;
 }
