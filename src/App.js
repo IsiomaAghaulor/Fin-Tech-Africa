@@ -1,10 +1,13 @@
-import Routes from "./routes/routes"
+import Routes from "./routes/routes";
+import ErrorBoundry from "./error/ErrorBoundry";
 
 function App() {
   return (
-    <div className="App">
-      <Routes/>
-    </div>
+    <ErrorBoundry>
+      <div className="App">
+        <Routes />
+      </div>
+    </ErrorBoundry>
   );
 }
 
