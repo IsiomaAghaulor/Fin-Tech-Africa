@@ -10,7 +10,7 @@ import "./login.css";
 const Login = () => {
   // validation
 
-  const initialValues = { email: " ", password: " " };
+  const initialValues = { email: "", password: "" };
 
   const { dispatch } = useContext(AuthContext);
   const [formValues, setFormValues] = useState(initialValues);
@@ -52,7 +52,7 @@ const Login = () => {
   };
 
   const login = async () => {
-    const response = await axios.post("http://localhost:9005/api/v1/login", {
+    const response = await axios.post("https://mentorship-payment-app.herokuapp.com/api/v1/login", {
       email: formValues.email,
       password: formValues.password,
     });
@@ -115,10 +115,10 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <span>
+        <span className="loginSpan">
           Don't have an accout?{" "}
           <a href="/create-account" className="app__create-account">
-            create an account
+            Create an account
           </a>
         </span>
       </div>
