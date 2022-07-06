@@ -30,7 +30,7 @@ const VerifcationFailed = () => {
           Sorry! Email verification failed.
           <br /> Please click button below to receive a new verification mail.
         </p>
-        <button className="ver-fail-button" onClick={handleSubmit}>
+        <button id="ver-fail-button" onClick={handleSubmit}>
           Resend link
         </button>
       </div>
