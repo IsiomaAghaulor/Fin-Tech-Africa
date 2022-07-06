@@ -7,8 +7,10 @@ import {
 
 const Dashboard = lazy(() => import("../pages/dashboard"));
 const Landing = lazy(() => import("../pages/landingpage"));
-const Signup = lazy(() => import("../pages/signup"));
 const Login = lazy(() => import("../pages/login"));
+const VerifyEmailRegistration = lazy(() => import("../pages/registration/VerifyEmailRegistration"));
+const SignUp = lazy(() => import("../pages/registration/SignUp"));
+const EmailVerification = lazy(() => import("../pages/emailVerification/EmailVerification"))
 
 export const Routes = () => {
     //TODO protect the dashboard route.
@@ -16,9 +18,11 @@ export const Routes = () => {
     <Router>
       <RouterCover>
         <Route path="/" element={<Landing />} />
-        <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path='/verify-email' element={< VerifyEmailRegistration />}/>
+        <Route path='/signup' element={< SignUp />}/>
+        <Route path='/verifyRegistration' element={< EmailVerification />}/>
       </RouterCover>
     </Router>
   );
