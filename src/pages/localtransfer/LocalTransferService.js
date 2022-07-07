@@ -1,4 +1,4 @@
-import { apiPost } from "../../utils/apiHelper"
+import { apiGet, apiPost } from "../../utils/apiHelper"
 
 class LocalTransferService {
   async saveTransaction(user,header) {
@@ -7,5 +7,6 @@ class LocalTransferService {
     return response.data;
     // return axios.post(LOCAL_TRANSFER_URL, user, {headers: header});
   }
+
 }
 export default new LocalTransferService();

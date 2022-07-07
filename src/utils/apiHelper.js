@@ -4,7 +4,7 @@ export const apiGet = (path, conf = {}, auth = "admin") => {
     const config = {
       ...conf,
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     };
     if (!auth) {
