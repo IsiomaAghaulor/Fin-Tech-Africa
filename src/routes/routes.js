@@ -9,11 +9,13 @@ import Landing from "../pages/landingpage";
 import Login from"../pages/login";
 import Profile from"../pages/profile/ProfilePage";
 import LocalTransfer from"../pages/localtransfer/LocalTransferPage";
+import AuthState from "../reducers/authState";
 
 export const Routes = () => {
     //TODO protect the dashboard route.
   return (
     <Router>
+      <AuthState>
       <RouterCover>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
@@ -22,6 +24,7 @@ export const Routes = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/transfer" element={<LocalTransfer />} />
       </RouterCover>
+      </AuthState>
     </Router>
   );
 };

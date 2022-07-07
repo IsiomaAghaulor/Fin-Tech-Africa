@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {useNavigate} from "react-router-dom"
 import './LocalTransferPage.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -7,6 +8,7 @@ import { useToasts } from 'react-toast-notifications';
 
 
 const LocalTransferPage = () => {
+    const navigate = useNavigate();
 
     const {addToast} = useToasts()
 
@@ -73,7 +75,7 @@ useEffect(()=>{
 
 },[accountNumber])
 
-var header = {'Authorization': localStorage.getItem("accessToken")}
+const header = {'Authorization': localStorage.getItem("accessToken")}
     const saveTransaction = (e) => {
         e.preventDefault();
         
@@ -100,7 +102,7 @@ var header = {'Authorization': localStorage.getItem("accessToken")}
             
             <div className="localTransferPage__side" >
                 <p>&larr;</p>
-                <Link className="side_link" to="/"> Go back</Link>
+                <button className="side_link" onClick={()=>navigate(-1)} > Go back</button>
             </div>
 
             <div className="localTransferPage__top">

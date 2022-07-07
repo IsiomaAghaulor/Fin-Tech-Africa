@@ -1,10 +1,11 @@
-import axios from "axios";
-
-const LOCAL_TRANSFER_URL = "https://mentorship-payment-app.herokuapp.com/api/v1/transfers/local";
+import { apiPost } from "../../utils/apiHelper"
 
 class LocalTransferService {
-  saveTransaction(user,header) {
-    return axios.post(LOCAL_TRANSFER_URL, user, {headers: header});
+  async saveTransaction(user,header) {
+    const response = await apiPost("/api/v1/transfers/local", user, header, true)
+    console.log(response.data);
+    return response.data;
+    // return axios.post(LOCAL_TRANSFER_URL, user, {headers: header});
   }
 }
 export default new LocalTransferService();

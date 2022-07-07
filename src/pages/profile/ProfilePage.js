@@ -17,8 +17,8 @@ const ProfilePage = () => {
     const [loading, setLoading] = useState(true);
     const [ user, setUser] = useState([])
 
-    var header = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGlidWV6ZW53YWppb2JpQGdtYWlsLmNvbSIsImlhdCI6MTY1NzE0NDkxOCwiZXhwIjoxNjU3MTQ2NzE3fQ.B2uBo8Qet1UmNI2cbIOm0PIJNfWFJ8bQG1FRheZLyHHNzIvWS_jYSQjhPNX3X3OlE55YtJJoJuJV3JHIN5DVkQ'}
-    // var header = {'Authorization': localStorage.getItem("accessToken")}
+    // var header = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGlidWV6ZW53YWppb2JpQGdtYWlsLmNvbSIsImlhdCI6MTY1NzE0NDkxOCwiZXhwIjoxNjU3MTQ2NzE3fQ.B2uBo8Qet1UmNI2cbIOm0PIJNfWFJ8bQG1FRheZLyHHNzIvWS_jYSQjhPNX3X3OlE55YtJJoJuJV3JHIN5DVkQ'}
+    var header = {'Authorization': localStorage.getItem("accessToken")}
     useEffect(() => {
         const fetchData = async () => {
           setLoading(true);
