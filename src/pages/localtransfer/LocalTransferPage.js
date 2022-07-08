@@ -30,7 +30,7 @@ const LocalTransferPage = () => {
   async function resolveAcc(accountNum) {
     try {
       const response = await axios.get(
-        `https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveLocalAccount/${accountNum}`
+        `${process.env.REACT_APP_BASE_URL}/api/v1/transfers/resolveLocalAccount/${accountNum}`
       );
 
       if (response.data.result) {
@@ -38,7 +38,6 @@ const LocalTransferPage = () => {
           ...user,
           accountName: response.data.result,
         });
-        console.log(response.data.result);
         setErrorMessage("");
         return;
       }
@@ -80,7 +79,6 @@ const LocalTransferPage = () => {
 
     LocalTransferService.saveTransaction(user, header)
       .then((response) => {
-        console.log(response);
         addToast("Transfer successfull!!", { appearance: "success" });
         setUser({
           accountNumber: "",

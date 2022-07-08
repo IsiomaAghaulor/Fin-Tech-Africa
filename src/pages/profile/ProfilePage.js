@@ -13,7 +13,7 @@ const ProfilePage = () => {
   const [user, setUser] = useState([]);
   const fetchSingleUser = () => {
     axios
-      .get("https://mentorship-payment-app.herokuapp.com/api/v1/user", {
+      .get(`${process.env.REACT_APP_BASE_URL}/api/v1/user`, {
         headers: header,
       })
       .then((resp) => {

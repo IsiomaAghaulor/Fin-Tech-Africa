@@ -1,4 +1,4 @@
-import { apiGet, apiPost } from "../../utils/apiHelper"
+import { apiPost } from "../../utils/apiHelper"
 
 class LocalTransferService {
   async saveTransaction(user,header) {

@@ -21,7 +21,6 @@ export const apiGet = (path, conf = {}, auth = "admin") => {
         ...(headers ? headers : {}),
       },
     };
-    console.log(`${process.env.REACT_APP_BASE_URL}${path}`, "apiHelper");
     return axios.post(`${process.env.REACT_APP_BASE_URL}${path}`, data, config);
   };
   export const apiPut = (path, data, conf = {}) => {
