@@ -7,17 +7,24 @@ import Signup from "../pages/signup";
 import Dashboard from "../pages/dashboard";
 import Landing from "../pages/landingpage";
 import Login from"../pages/login";
+import Profile from"../pages/profile/ProfilePage";
+import LocalTransfer from"../pages/localtransfer/LocalTransferPage";
+import AuthState from "../reducers/authState";
 
 export const Routes = () => {
     //TODO protect the dashboard route.
   return (
     <Router>
+      <AuthState>
       <RouterCover>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/transfer" element={<LocalTransfer />} />
       </RouterCover>
+      </AuthState>
     </Router>
   );
 };
