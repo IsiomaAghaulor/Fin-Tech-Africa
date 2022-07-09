@@ -4,10 +4,10 @@ import {
   Route,
 } from "react-router-dom";
 import Dashboard from "../pages/dashboard";
-import Landing from "../pages/landingpage";
 import Login from"../pages/login/login";
 import VerifyEmailRegistration from "../pages/registration/VerifyEmailRegistration";
 import SignUp from "../pages/registration/SignUp";
+import LandingPage from "../pages/home/landingPage";
 import EmailVerification from "../pages/emailVerification/EmailVerification";
 
 export const Routes = () => {
@@ -15,7 +15,7 @@ export const Routes = () => {
   return (
     <Router>
       <RouterCover>
-        <Route path="/" element={<Landing />} />
+      <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path='/verify-email' element={< VerifyEmailRegistration />}/>
