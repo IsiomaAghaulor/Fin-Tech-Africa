@@ -11,10 +11,10 @@ export const TransactionBtn = () => {
   return (
     <div className="TransactionBtn">
       
-        <button onClick={() => navigate("/signup")} className="transfer">Transfer</button>
+        <button onClick={() => navigate("/transfer")} className="transfer">Transfer</button>
         
   
-      <button className="profile"> Profile</button>
+      <button onClick={() => navigate("/profile")} className="profile"> Profile</button>
     </div>
   );
 };

@@ -1,138 +1,109 @@
-.app__Login-container{
-    background-color: red;
-    width:100%;
-    height: 100vh;
-    display: flex;
+.app__Login-container {
+  /* background-color: red; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
-.app__Login-details{
+.app__Login-details {
+  background-color: white;
+  flex: 4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.app__Login-banner {
+  background-color: yellow;
+  flex: 6;
+  background-image: url(../../assets/loginPicture.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app__Login-Label {
+  color: #012a4a;
+  padding-top: 20px;
+}
+
+.app__Login-details h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #012a4a;
+  margin-top: 70px;
+}
+
+.inputField input {
+  width: 395px;
+  height: 40px;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 0.3rem;
+  border-color: lightgray;
+  border-top: 0.1rem solid;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.app__create-account {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.loginSpan {
+  font-size: 12px;
+}
+
+.app__forgotPassword {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #1d6adc;
+  text-decoration: none;
+}
+
+.app__login-buttonDiv .app__login-Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px 0.3rem;
+  margin-bottom: 1rem;
+  width: 396px;
+  height: 48px;
+  margin-top: 10px;
+}
+
+.app__login-Button {
+  background: linear-gradient(
+    105.38deg,
+    #4361ee 19.05%,
+    #3a0ca3 82.03%,
+    #3a0ca3 82.03%
+  );
+  color: white;
+}
+
+.fa-solid {
+  color: #c4c4c4;
+  width: 16px;
+  height: 12px;
+}
+
+.inputField {
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .app__Login-container {
     background-color: white;
-    flex: 4;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* justify-content: center;  */
-    padding-left: 50px;  
+    gap: 30px;
+  }
 }
-
-
-.app__Login-banner{
-    background-color: yellow;
-    flex: 6;
-    background-image: url(../../assets/loginPicture.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-}
-
-.app__Login-Label{
-    color: #012A4A;
-    padding-top: 20px;
-}
-
-/* h2{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #504e4e;
-    margin-top: 70px;
-} */
-
-input{
-    width: 395px;
-    height: 40px;
-    display: block;
-    outline: none;
-    border-radius: 5px;
-    padding: 8px .3rem;
-    border-color: lightgray;
-    border-top: .1rem solid;
-    border-bottom: 1px solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-
-}
-
-
-.app__create-account{
-    text-decoration: none;
-    font-size: 12px;
-}
-
-span{
-    font-size: 12px;
-
-}
-
-.app__forgotPassword{
-    margin-top: 10px;
-    font-size: 12px;
-    color: #1d6adc;
-    text-decoration: none;
-}
-
-
-.app__login-buttonDiv .app__login-Button
-{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 8px .3rem;
-    margin-bottom: 1rem; 
-    width: 396px;
-    height:48px;
-    margin-top: 10px;
-
-}
-
-.app__login-Button{
-    background: linear-gradient(105.38deg, #4361EE 19.05%, #3A0CA3 82.03%, #3A0CA3 82.03%);
-    color: white;
-   
-}
-
-/* .app__Login-email-input{
-    margin-top: 20px;
-    border: 1px;
-} */
-p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
-   
-}
-
-.fa-solid{
-color:  #C4C4C4;
-width: 16px;
-height: 12px;
-}
-
-.inputField{
-    position: relative;
-}
-/* .app__login-passwordIcon{
-    position: absolute;
-    top: 50%;
-    left: 3%;
-}
-.app__login-icons{
-    position: absolute;
-    top: 50%;
-    left: 3%;
-} */
-
-
-@media only screen and (max-width: 768px)  { 
-    .app__Login-container{
-        background-color: white;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
- }

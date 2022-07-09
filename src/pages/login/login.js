@@ -1,15 +1,20 @@
 import React from "react";
 import { useContext } from "react";
-import { AuthContext } from "../../context/Context";
+// import { AuthContext } from "../../context/Context";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useState } from "react";
+import { useAuth } from "../../reducers/authState";
+
 import "./login.css";
 
 const Login = () => {
+  // validation
+  const {loading, login} = useAuth();
 
-  const initialValues = { email: " ", password: " " };
-  const { dispatch } = useContext(AuthContext);
+  const initialValues = { email: "", password: "" };
+
+  // const { dispatch } = useContext(AuthContext);
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
   const [, setIsSubmit] = useState(false);
@@ -22,7 +27,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     validate(formValues);
-    login();
+    login({
+           email: formValues.email,
+           password: formValues.password,
+         });
 
     setIsSubmit(true);
   };
@@ -44,18 +52,18 @@ const Login = () => {
     }
   };
 
-  const login = async () => {
-    const response = await axios.post("http://localhost:9005/api/v1/login", {
-      email: formValues.email,
-      password: formValues.password,
-    });
-    console.log(response);
-    const token = response.data.result.accessToken;
-    const decoded = jwt_decode(token);
-    console.log(decoded);
+  // const login = async () => {
+  //   const response = await axios.post("https://mentorship-payment-app.herokuapp.com/api/v1/login", {
+  //     email: formValues.email,
+  //     password: formValues.password,
+  //   });
+  //   console.log(response);
+  //   const token = response.data.result.accessToken;
+  //   const decoded = jwt_decode(token);
+  //   console.log(decoded);
 
-    dispatch({ type: "LOGIN", payload: response.data.result.accessToken });
-  };
+  //   dispatch({ type: "LOGIN", payload: {...response.data } });
+  // };
 
   return (
     <div className="app__Login-container">
@@ -63,7 +71,7 @@ const Login = () => {
         <h2 className="app__Login-title">Fintech.africa</h2>
 
         <h2 className="app__Login-subtitle">Hi, Welcome back</h2>
-        <form onSubmit={handleSubmit}>
+        {/* <form > */}
           <div>
             <div className="inputField">
               <label className="app__Login-Label">Email</label>
@@ -103,15 +111,15 @@ const Login = () => {
           </a>
 
           <div className="app__login-buttonDiv">
-            <button className="app__login-Button" type="submit">
+            <button className="app__login-Button" onClick={handleSubmit} >
               Login
             </button>
           </div>
-        </form>
-        <span>
+        {/* </form> */}
+        <span className="loginSpan">
           Don't have an accout?{" "}
           <a href="/create-account" className="app__create-account">
-            create an account
+            Create an account
           </a>
         </span>
       </div>
