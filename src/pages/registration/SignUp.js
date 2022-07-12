@@ -16,7 +16,7 @@ const SignUp = () => {
     navigate("/verify-email");
   };
 
-  const localhostUrl = "http://localhost:9005/api/v1/user/register";
+  // const localhostUrl = "http://localhost:9005/api/v1/user/register";
   const herokuUrl =
     "https://mentorship-payment-app.herokuapp.com/api/v1/user/register";
   const currentUrl = herokuUrl;

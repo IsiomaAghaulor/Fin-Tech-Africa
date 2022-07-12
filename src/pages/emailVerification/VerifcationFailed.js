@@ -7,9 +7,8 @@ import "./VerificationFailed.css";
 const VerifcationFailed = () => {
   const { search } = useLocation();
   const token = search.split("=")[1];
-  // console.log("Verification Failed Token", token);
 
-  const localhostUrl = `http://localhost:9005/api/v1/user/resendVerificationToken?token=${token}`;
+  // const localhostUrl = `http://localhost:9005/api/v1/user/resendVerificationToken?token=${token}`;
   const herokuUrl = `https://mentorship-payment-app.herokuapp.com/api/v1/user/resendVerificationToken?token=${token}`;
   const currentUrl = herokuUrl;
 

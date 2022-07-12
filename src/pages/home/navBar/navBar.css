@@ -49,9 +49,9 @@
 }
 
 .header-li span{
-    color: #4361EE;
+    color: #869af3;
     font-weight: 700;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .header-end{
@@ -63,6 +63,7 @@
 .header-end-li{
     position: absolute;
     list-style: none;
+    cursor: pointer;
     color: #012A4A;
     right: 22%;
     top: 42%;

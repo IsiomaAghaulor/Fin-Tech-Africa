@@ -1,7 +1,14 @@
 import React from "react";
 import "./section1.css";
+import {useNavigate} from "react-router-dom";
 
 const Section1 = () => {
+
+  const navigate = useNavigate();
+  const navigateToSignup = () =>{
+    navigate("/signup");
+  }
+
     return(
         <div>
             <div className="section1">
@@ -17,7 +24,7 @@ const Section1 = () => {
                 <br />
                 anytime & anyday.
               </p>
-              <button>Create an account</button>
+              <button onClick={navigateToSignup}>Create an account</button>
             </div>
             <div className="section1-b">
               <ul>

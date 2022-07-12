@@ -71,6 +71,7 @@ const LocalTransferPage = () => {
       });
       setErrorMessage("account not found");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [accountNumber]);
 
   const header = { Authorization: localStorage.getItem("accessToken") };

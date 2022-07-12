@@ -1,7 +1,29 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./navBar.css";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const navigateToHome = () =>{
+    navigate("/");
+  }
+  const navigateToFeature = () =>{
+    navigate("/feature");
+  }
+  const navigateToAbout = () =>{
+    navigate("/about");
+  }
+  const navigateToContact = () =>{
+    navigate("/contact-us");
+  }
+  const navigateToLogin = () =>{
+    navigate("/login");
+  }
+  const navigateToSignup = () =>{
+    navigate("/signup");
+  }
+
   return (
     <div>
       <div className="header">
@@ -12,28 +34,27 @@ const NavBar = () => {
           <nav className="header-nav">
             <ul className="header-ul">
               <li className="header-li">
-                <a>
-                  {" "}
-                  <span>Home</span>{" "}
+                <a onClick={navigateToHome}>
+                  <span>Home</span>
                 </a>
               </li>
               <li className="header-li">
-                <a> Feature </a>
+                <a onClick={navigateToFeature}> Feature </a>
               </li>
               <li className="header-li">
-                <a> About </a>
+                <a onClick={navigateToAbout}> About </a>
               </li>
               <li className="header-li">
-                <a> Contact Us </a>
+                <a onClick={navigateToContact}> Contact Us </a>
               </li>
             </ul>
             <div className="header-end">
               <ul>
                 <li className="header-end-li">
-                  <a> Login </a>
+                  <a onClick={navigateToLogin}> Login </a>
                 </li>
               </ul>
-              <button>Create an account</button>
+              <button onClick={navigateToSignup}>Create an account</button>
             </div>
           </nav>
         </header>

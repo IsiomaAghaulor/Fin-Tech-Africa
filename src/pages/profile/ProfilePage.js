@@ -11,6 +11,7 @@ const ProfilePage = () => {
   var header = { Authorization: "Bearer " + token };
 
   const [user, setUser] = useState([]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchSingleUser = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/api/v1/user`, {
@@ -26,7 +27,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     fetchSingleUser();
-  }, [fetchSingleUser]);
+  }, [fetchSingleUser,]);
 
   return (
     <div className="profilePage">

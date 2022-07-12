@@ -9,9 +9,8 @@ const EmailVerification = () => {
   const [message, setMessage] = useState("");
   const { search } = useLocation();
   const token = search.split("=")[1];
-  // console.log('Email Verification token', token);
 
-  const localhostUrl = `http://localhost:9005/api/v1/user/verifyRegistration?token=${token}`;
+  // const localhostUrl = `http://localhost:9005/api/v1/user/verifyRegistration?token=${token}`;
   const herokuUrl = `https://mentorship-payment-app.herokuapp.com/api/v1/user/verifyRegistration?token=${token}`;
   const currentUrl = herokuUrl;
 
@@ -25,7 +24,8 @@ const EmailVerification = () => {
     };
 
     loadVerification();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
 
   console.log(message);
