@@ -1,8 +1,4 @@
 import React from "react";
-import { useContext } from "react";
-// import { AuthContext } from "../../context/Context";
-import axios from "axios";
-import jwt_decode from "jwt-decode";
 import { useState } from "react";
 import { useAuth } from "../../reducers/authState";
 
@@ -10,6 +6,7 @@ import "./login.css";
 
 const Login = () => {
   // validation
+  // eslint-disable-next-line
   const {loading, login} = useAuth();
 
   const initialValues = { email: "", password: "" };
@@ -51,19 +48,6 @@ const Login = () => {
       console.log(formErrors.password);
     }
   };
-
-  // const login = async () => {
-  //   const response = await axios.post("https://mentorship-payment-app.herokuapp.com/api/v1/login", {
-  //     email: formValues.email,
-  //     password: formValues.password,
-  //   });
-  //   console.log(response);
-  //   const token = response.data.result.accessToken;
-  //   const decoded = jwt_decode(token);
-  //   console.log(decoded);
-
-  //   dispatch({ type: "LOGIN", payload: {...response.data } });
-  // };
 
   return (
     <div className="app__Login-container">
