@@ -7,7 +7,7 @@ import { Navigate } from "react-router-dom";
 export const TransactionList = () => {
   const [values, setValues] = useState([]);
   const token = localStorage.getItem("accessToken");
-  if (token == null) {
+  if (!token) {
     Navigate("/signin");
   }
 
