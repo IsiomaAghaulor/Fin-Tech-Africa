@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import axios from "axios";
 import SelectDropdown from "../../component/SelectDropdown/SelectDropdown";
+import {apiPost} from "../../utils/apiHelper/apiPost"
 
 function OtherBankTransfer() {
   const [toggleState, setToggleState] = useState(1);
@@ -18,20 +19,21 @@ function OtherBankTransfer() {
     setToggleState(index);
   };
 
+  
   //call to get all banks
-  const resolveOtherBanks = (bankCode) => {
-    axios({
-      method: "POST",
-      url: "https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveOtherBank",
-      data: { account_number: accountNumber,
-         account_bank: bankCode ? bankCode : ""   },
-    })
-      .then((response) => {
-        console.log(response.data);
-        setUsername(response.data.result.data.account_name);
-      })
-      .catch((error) => console.log(`${error.message}`));
-  };
+  // const resolveOtherBanks = (bankCode) => {
+  //   axios({
+  //     method: "POST",
+  //     url: "https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveOtherBank",
+  //     data: { account_number: accountNumber,
+  //        account_bank: bankCode ? bankCode : ""   },
+  //   })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setUsername(response.data.result.data.account_name);
+  //     })
+  //     .catch((error) => console.log(`${error.message}`));
+  // };
 
   useEffect(() => {
     async function getOtherBanks() {
@@ -53,7 +55,8 @@ function OtherBankTransfer() {
     if (accountNumber !== "" && accountNumber.length ===10 && bankCode !== ""){
       console.log('acc', accountNumber, 'code', e.target.value,'code selected');
       //Make api call to fetch the account Details.
-      resolveOtherBanks(e.target.value);
+      // resolveOtherBanks(e.target.value);
+      apiPost("https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveOtherBank", bankCode,false)
     }
   }
 
@@ -96,12 +99,7 @@ function OtherBankTransfer() {
   return (
     <div className="app__OtherBankTransfer-container">
       <div className="app__OtherBankTransfer-tabs">
-        {/* <div
-          className={toggleState === 1 ? "tab activeTab" : "tab"}
-          onClick={() => toggleTab(1)}
-        >
-          Local Transfer
-        </div> */}
+        
         <div
           className={toggleState === 1 ? "tab activeTab" : "tab"}
           onClick={() => toggleTab(2)}
@@ -111,43 +109,7 @@ function OtherBankTransfer() {
       </div>
 
       <div className="app__OtherBankTransfer-tabContent">
-        {/* local transfer */}
-
-        {/* <div
-          className={toggleState === 1 ? "content active-content" : "content"}
-        >
-          <input
-            title="AccountNumber"
-            className="app__OtherBankTransfer-accountNumberInputField"
-            placeholder="Account Number"
-            
-          />
-
-          <p>{userName}</p>
-          <input
-            title="amount"
-            className="app__OtherBankTransfer-input"
-            placeholder="Amount"
-            
-          />
-
-          <p>{}</p>
-          <input
-            title="Pin"
-            className="app__OtherBankTransfer-input"
-            placeholder="Pin"
-            
-          />
-          <input
-            title="Narrartion"
-            className="app__OtherBankTransfer-input"
-            placeholder="Narrartion"
-            
-          />
-          <button action="" name="Send Money" styleclass="sendMoney"></button>
-        </div> */}
-
-        {/* Other Bank transfer */}
+       
 
         <div
           className={toggleState === 2 ? "content active-content" : "content"}
@@ -189,7 +151,6 @@ function OtherBankTransfer() {
             title="Pin"
             className="app__OtherBankTransfer-input"
             placeholder="Pin"
-            
             onChange={(e) => setPin(e.target.value)}
             value={pin}
           />
