@@ -3,6 +3,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    
   }
 
   .app__resetPassword-form {
@@ -12,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 50px;
+    padding-left: 50px;  
   }
 
   .app__resetPassword-h2{
@@ -60,4 +61,5 @@
     background-image: url(../../assets/loginPicture.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
   } 

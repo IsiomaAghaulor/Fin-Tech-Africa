@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import axios from "axios";
 import SelectDropdown from "../../component/SelectDropdown/SelectDropdown";
-import {apiPost} from "../../utils/apiHelper/apiPost"
+
 
 function OtherBankTransfer() {
   const [toggleState, setToggleState] = useState(1);
