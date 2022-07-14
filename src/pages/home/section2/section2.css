@@ -1,0 +1,53 @@
+/*SECTION2 styles*/
+
+.section2{
+    display: flex;
+    background: whitesmoke;
+    position: relative;
+    padding-bottom: 120px;
+    width: 100vw;
+}
+.section2-a{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin-top: 130px;
+}
+
+.section2-b{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 80px;
+    position: absolute;
+    left: 62%;
+    top: 20%;
+    text-align: center;
+}
+
+.icon30{
+    margin-right: 30px;
+}
+
+.section2-a h1{
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 20px;
+    color: #3A0CA3;
+}
+
+.section2-a p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.section2-b p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-top: 30px;
+}

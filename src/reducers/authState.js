@@ -54,7 +54,7 @@ const AuthState = ({ children }) => {
         }
     }
     const logout = async (data) => {
-        const refreshToken = localStorage.getItem('refreshToken');
+        // const refreshToken = localStorage.getItem('refreshToken');
         try {
             await apiPost('/auth/logout', {}, {});
             dispatch({
