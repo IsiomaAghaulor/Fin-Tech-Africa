@@ -1,0 +1,64 @@
+import React, { useEffect, useState } from "react";
+import "./index.css";
+import axios from "axios";
+import { ReactComponent as FirstBank } from "./images/newfirstb.svg";
+import { Navigate } from "react-router-dom";
+
+export const TransactionList = () => {
+  const [values, setValues] = useState([]);
+  const token = localStorage.getItem("accessToken");
+  if (!token) {
+    Navigate("/signin");
+  }
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://mentorship-payment-app.herokuapp.com/api/v1/user/view-transaction-history",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      const result = response.data.result.content;
+      console.log("our result", result);
+      setValues(result);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+
+    // eslint-disable-next-line
+  }, []);
+
+  return (
+    <>
+      <div className="note-tag">
+        <p>Transaction history</p>
+      </div>
+      {values.map((item, index) => {
+        return (
+          <div className="mother" key={index}>
+            <div className="left">
+              <FirstBank />
+              <div className="transaction-history-middle">
+                <p>{item.name}</p>
+                <div className="transaction-history-bottom">
+                  <p>{item.bank}</p>
+                  <p>{item.transactionTime}</p>
+                </div>
+              </div>
+            </div>
+            <div className="transaction-history-right">
+              <p>{item.amount}</p>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+};
