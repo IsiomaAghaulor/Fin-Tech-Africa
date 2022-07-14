@@ -8,7 +8,6 @@ import { Navigate } from "react-router-dom";
 export const TransactionDisplay = () => {
   const [showBalance, setShowBalance] = useState(false);
   const [values, setValues] = useState([]);
-  // const [show, setShow] = useState(true);
 
   const toggleBalance = () => {
     setShowBalance(showBalance ? false : true);
@@ -16,13 +15,13 @@ export const TransactionDisplay = () => {
   };
 
   const token = localStorage.getItem("accessToken");
-  if (token == null) {
+  if (!token) {
     Navigate("/signin");
-    console.log("Please");
   }
   console.log("this is the logged in token: " + token);
 
   useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
     const response = axios
       .get("https://mentorship-payment-app.herokuapp.com/api/v1/wallet", {
         headers: {
@@ -30,14 +29,13 @@ export const TransactionDisplay = () => {
         },
       })
       .then((res) => {
-        console.log("display this result", res.data.result);
         const result = res.data.result;
         setValues(result);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [token]);
 
   return (
     <>
