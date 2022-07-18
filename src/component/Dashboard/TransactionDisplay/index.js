@@ -16,14 +16,15 @@ export const TransactionDisplay = () => {
   };
 
   const token = localStorage.getItem("accessToken");
-  if (token == null) {
+  if (!token) {
     Navigate("/signin");
     console.log("Please");
   }
   console.log("this is the logged in token: " + token);
 
   useEffect(() => {
-    const response = axios
+    // eslint-disable-next-line
+    axios
       .get("https://mentorship-payment-app.herokuapp.com/api/v1/wallet", {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -37,6 +38,7 @@ export const TransactionDisplay = () => {
       .catch((err) => {
         console.log(err);
       });
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -48,7 +50,8 @@ export const TransactionDisplay = () => {
           </div>
           <div className="transaction-body">
             <p>Account Balance</p>
-            <h1>{`${showBalance ? "*******" : values.balance}`}</h1>
+
+            <h1>{ values.balance ? `${showBalance ? "*******" : values.balance}` : "Loading..."}</h1>
             <p>{values.bankName}</p>
             <div className="row-effect">
               <div>

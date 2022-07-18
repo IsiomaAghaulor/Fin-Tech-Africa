@@ -93,7 +93,7 @@ const Login = () => {
           </div>
         </div>
 
-        <a href="/forgot-password" className="app__forgotPassword">
+        <a href="/forgotPassword" className="app__forgotPassword">
           Forgot password?
         </a>
 
@@ -105,7 +105,7 @@ const Login = () => {
         {/* </form> */}
         <span className="loginSpan">
           Don't have an accout?{" "}
-          <a href="/create-account" className="app__create-account">
+          <a href="/signup" className="app__create-account">
             Create an account
           </a>
         </span>
