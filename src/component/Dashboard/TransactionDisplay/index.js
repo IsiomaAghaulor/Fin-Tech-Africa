@@ -61,13 +61,16 @@ export const TransactionDisplay = () => {
             </div>
           </div>
         </div>
+        {values.bankName && (     
         <div className="eye-image" onClick={toggleBalance}>
+      
           {showBalance ? (
             <BsEyeSlash className="eyeicons" />
           ) : (
             <BsEye className="eyeicons" />
           )}
         </div>
+            )}
       </div>
     </>
   );
