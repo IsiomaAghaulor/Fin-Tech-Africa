@@ -64,3 +64,36 @@ letter-spacing: -0.288889px;
     font-size: 14px;
     line-height: 22px;
 }
+
+@media only screen and (max-width: 500px) {
+    .footer-container {
+        /* display: none; */
+        /* width: 100%; */
+        padding: 0px;
+    }
+    .footer-heading_middle{
+        display: none;
+    }
+    .footer-heading > h4{
+        margin: 10px 0;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .icons{
+        justify-content: space-around;
+        margin-left: 80px;
+        gap: 10px;
+    }
+    .footer__bottom{
+        justify-content: normal;
+        margin-left: 20px;
+    }
+    .footer-heading.footer-3{
+        margin-left: 15px;
+    }
+    .foot-style{
+        width: 100%;
+        justify-content: normal;
+        /* align-content: center; */
+    }
+}

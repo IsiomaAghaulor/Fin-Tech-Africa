@@ -80,3 +80,46 @@
     padding: 10px;
     margin-right: 5px;
     }
+
+    @media only screen and (max-width: 1000px) {
+        .section6-container {
+            width: 100%;
+        }
+        .mail-container{
+            width: 100%;
+            height: 160px;
+        }
+        .mail-container > h1{
+            width: 100%;
+            font-size: 20px;
+            margin: 0;
+        }
+        .lore-p-1 {
+            display: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        .email-port{
+            width: 57%;
+            margin-left: 20px;
+            padding: 5px;
+            height: 40px;
+            border: none;
+        }
+        .subscribe-btn{
+            width: 30%;
+            height: 40px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+        .email-input-style{
+            width: 100%;
+            justify-content: normal;
+            padding: 0px;
+        }
+        .lore-p-2{
+            font-size: 11px;
+            width: 90%;
+        }
+    }
