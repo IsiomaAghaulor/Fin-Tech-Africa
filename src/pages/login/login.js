@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
- 
+ // eslint-disable-next-line
   const { loading, login } = useAuth();
   const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const Login = () => {
       password: formValues.password,
     });
 
-    navigate("/dashboard");
+    navigateToDashboard();
     setIsSubmit(true);
   };
 

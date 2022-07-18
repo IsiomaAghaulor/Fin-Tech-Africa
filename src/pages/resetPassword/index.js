@@ -3,10 +3,11 @@ import "./index.css";
 import { useAuth } from "../../reducers/authState";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { Search } from "@material-ui/icons";
+// import { Search } from "@material-ui/icons";
 import "./index.css";
 
 const ResetPassword = () => {
+  // eslint-disable-next-line
   const { loading, reset_Password } = useAuth();
 
   const initialValues = { newPassword: "", confirmPassword: "" };
