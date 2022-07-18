@@ -44,7 +44,7 @@ const ResetPassword = () => {
   return (
     <div className="app__resetPassword-container">
       <div className="app__resetPassword-form">
-        <div className="isioma">
+        <div className="app__resetPassword-form-subDiv">
           <h2 className="app__resetPassword-h2">Reset Password</h2>
 
           <form>

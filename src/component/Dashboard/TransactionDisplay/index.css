@@ -49,8 +49,8 @@
     font-size: 2rem;
 
 }
-.account{
-    font-size: 1.5rem;
+.icon-account{
+    font-size: 2.5rem;
     padding-right: 15px;
     
 }
@@ -58,7 +58,7 @@
     margin-right: 40px;
 }
 
-.icons{
+.eyeicons{
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;

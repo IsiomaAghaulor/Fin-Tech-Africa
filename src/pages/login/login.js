@@ -6,29 +6,27 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
-  
-  const {loading, login} = useAuth();
+ 
+  const { loading, login } = useAuth();
+  const navigate = useNavigate();
 
   const initialValues = { email: "", password: "" };
 
-  // const { dispatch } = useContext(AuthContext);
+ 
   const [formValues, setFormValues] = useState(initialValues);
 
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
 
   const [, setIsSubmit] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-const navigate = useNavigate();
-
-const navigateToDashboard =()=> {
-  navigate("/dashboard")
-}
+  const navigateToDashboard = () => {
+    navigate("/dashboard");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,13 +35,12 @@ const navigateToDashboard =()=> {
       email: formValues.email,
       password: formValues.password,
     });
-    // navigateToDashboard();
-    setFormValues(initialValues)
+
+    navigate("/dashboard");
     setIsSubmit(true);
   };
 
   const validate = (values) => {
-
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -68,50 +65,45 @@ const navigateToDashboard =()=> {
 
         <h2 className="app__Login-subtitle">Hi, Welcome back</h2>
         {/* <form > */}
-          <div>
-            <div className="inputField">
-              <label className="app__Login-Label">Email</label>
-              <input
-                id="email"
-                value={formValues.email}
-                name="email"
-                title="Email"
-                placeholder="✉️ Enter your email"
-                onChange={handleChange}
-              />
+        <div className="app__Login-input-container">
+          <div className="inputField">
+            <label className="app__Login-Label">Email</label>
+            <input
+              id="email"
+              value={formValues.email}
+              name="email"
+              title="Email"
+              placeholder="✉️ Enter your email"
+              onChange={handleChange}
+            />
 
-              {/* <div className='app__login-icons'>
-          <FontAwesomeIcon icon="fa-solid fa-envelope" />
-          </div> */}
-            </div>
-
-            <div className="inputField">
-              <label className="app__Login-Label">Password</label>
-              
-              <input
-                id="password"
-                value={formValues.password}
-                name="password"
-                type="password"
-                title="Password"
-                placeholder="🔒 Enter your password"
-                onChange={handleChange}
-              />
-              {/* <div className='app__login-passwordIcon'>
-          <FontAwesomeIcon icon="fa-solid fa-lock"/>
-          </div> */}
-            </div>
+          
           </div>
 
-          <a href="/forgotPassword" className="app__forgotPassword">
-            Forgot password?
-          </a>
-
-          <div className="app__login-buttonDiv">
-            <button className="app__login-Button" onClick={handleSubmit} >
-              Login
-            </button>
+          <div className="inputField">
+            <label className="app__Login-Label">Password</label>
+            <input
+              id="password"
+              value={formValues.password}
+              name="password"
+              type="password"
+              title="Password"
+              placeholder="🔒 Enter your password"
+              onChange={handleChange}
+            />
+            
           </div>
+        </div>
+
+        <a href="/forgot-password" className="app__forgotPassword">
+          Forgot password?
+        </a>
+
+        <div className="app__login-buttonDiv">
+          <button className="app__login-Button" onClick={handleSubmit}>
+            Login
+          </button>
+        </div>
         {/* </form> */}
         <span className="loginSpan">
           Don't have an accout?{" "}
