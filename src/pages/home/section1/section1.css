@@ -35,12 +35,10 @@
     padding-top: 13px;
     padding-bottom: 13px;
     font-size: 18px;
-    /* margin-top: -15px; */
     color: white;
     background: linear-gradient(to right, #4361EE, #3A0CA3, #3A0CA3);
     cursor: pointer;
     margin-top: 20px;
-    /* padding: 15px; */
     width: 30%;
     border: none;
 }
@@ -131,7 +129,6 @@
 @media only screen and (max-width: 500px) {
     
     .section1-container {
-        /* display: none; */
         width: 100%;
     }
     .section1{

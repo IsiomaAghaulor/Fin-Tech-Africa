@@ -54,7 +54,6 @@
 .header-li span{
     color: #869af3;
     font-weight: 700;
-    /* font-size: 20px; */
 }
 
 .header-end{
@@ -145,22 +144,16 @@
         flex-wrap: wrap;
         align-content: flex-start;
         right: 10%;
-        /* padding-top: 10px; */
         padding-right: 40px;
         flex-direction: column;
-        /* width: 100%; */
-        /* margin-right: 50px; */
     }
 
     .header-li {
         border-top: 1px solid rgba(255, 255, 255, 0.555);
-        /* display: flex; */
         width: 80%;
         text-align: center;
         margin-left: -120%;
-        /* background-color: red; */
         padding-top: 50px;
-        /* line-height: 0px; */
     }
 
     .header-li > a {
