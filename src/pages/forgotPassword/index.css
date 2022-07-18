@@ -48,6 +48,7 @@ body{
     line-height:38.7px;
     text-align: center;
     font-weight: 700;
+    margin-top: 50px;
 }
 
 .app__forgotPassword-input{
@@ -63,7 +64,7 @@ border: 1px solid black;
 }
 
 .app__forgotPassword-resetBtn{
-    /* background: linear-gradient(to right, #3146e7, #0a195e); */
+     background: linear-gradient(to right, #3146e7, #0a195e); 
     color: white;
     width:395px;
     font-weight: bold;
@@ -80,10 +81,11 @@ border: 1px solid black;
     color: black;
     width:104px;
     height: 19px;
-    /* font-size: 16px; */
+    font-size: 12px; 
     font-weight: bold;
     height: 30px;
     margin-top: 40px;
+    margin-bottom: 40px;
     /* position: absolute;
     margin:20px auto;
     left: 0;

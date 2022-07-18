@@ -8,7 +8,11 @@ import {
     LOGOUT,
     LOGIN_FAIL,
     LOGOUT_FAIL,
+    RESET_PASSWORD,
+    RESET_PASSWORD_FAIL,
+    RESET_PASSWORD_SUCCESS
 } from "./types";
+
 import { apiPost } from "../utils/apiHelper";
 const AuthState = ({ children }) => {
     const initialState = {
@@ -34,10 +38,14 @@ const AuthState = ({ children }) => {
             type: LOADING,
             payload: true
         });
+
         try {
+
             //If there is need to do any conditional stuff.
-            const response = await apiPost(`/api/v1/login`, formData, config, false);
+
+            const response = await apiPost(`/api/v1/login`, formData, config, true);
             const {exp} = jwt_decode(response.data.result.accessToken);
+
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: {
@@ -46,6 +54,8 @@ const AuthState = ({ children }) => {
                     expiresIn: exp
                 }
             })
+
+
         } catch (error) {
             dispatch({
                 type: LOGIN_FAIL,
@@ -53,6 +63,7 @@ const AuthState = ({ children }) => {
             });
         }
     }
+
     const logout = async (data) => {
         // const refreshToken = localStorage.getItem('refreshToken');
         try {
@@ -61,6 +72,7 @@ const AuthState = ({ children }) => {
                 type: LOGOUT,
                 payload: data
             });
+
         }catch (err){
             dispatch({
                 type: LOGOUT_FAIL,
@@ -68,6 +80,30 @@ const AuthState = ({ children }) => {
             });
         }
     }
+
+    const reset_Password = async (formData) => {
+        dispatch({
+            type: RESET_PASSWORD,
+            payload: true
+        })
+
+        try {
+            const response = await apiPost(`/api/v1/reset-password`,formData,config);
+
+            dispatch({
+                type: RESET_PASSWORD_SUCCESS,
+                payload: response.message,
+            });
+    }
+
+        catch (err){
+            dispatch({
+                type: RESET_PASSWORD_FAIL,
+                payload: err.message
+            });
+        }
+    }
+    
     return (
         <AuthContext.Provider
         value={{
@@ -77,6 +113,9 @@ const AuthState = ({ children }) => {
             error: state.error,
             login,
             logout,
+            reset_Password,
+
+
         }}>
             { children }
         </AuthContext.Provider>

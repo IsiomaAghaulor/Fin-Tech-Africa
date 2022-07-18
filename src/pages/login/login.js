@@ -1,40 +1,52 @@
 import React from "react";
 import { useState } from "react";
 import { useAuth } from "../../reducers/authState";
+import { useNavigate } from "react-router-dom";
 
 import "./login.css";
 
 const Login = () => {
-  // validation
-  // eslint-disable-next-line
+  
   const {loading, login} = useAuth();
 
   const initialValues = { email: "", password: "" };
 
   // const { dispatch } = useContext(AuthContext);
   const [formValues, setFormValues] = useState(initialValues);
+
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
+
   const [, setIsSubmit] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
+const navigate = useNavigate();
+
+const navigateToDashboard =()=> {
+  navigate("/dashboard")
+}
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     validate(formValues);
     login({
-           email: formValues.email,
-           password: formValues.password,
-         });
-
+      email: formValues.email,
+      password: formValues.password,
+    });
+    // navigateToDashboard();
+    setFormValues(initialValues)
     setIsSubmit(true);
   };
 
   const validate = (values) => {
+
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     const validEmail = regex.test(values.email);
     console.log(validEmail, values);
 
@@ -75,6 +87,7 @@ const Login = () => {
 
             <div className="inputField">
               <label className="app__Login-Label">Password</label>
+              
               <input
                 id="password"
                 value={formValues.password}
@@ -90,7 +103,7 @@ const Login = () => {
             </div>
           </div>
 
-          <a href="/forgot-password" className="app__forgotPassword">
+          <a href="/forgotPassword" className="app__forgotPassword">
             Forgot password?
           </a>
 
@@ -102,7 +115,7 @@ const Login = () => {
         {/* </form> */}
         <span className="loginSpan">
           Don't have an accout?{" "}
-          <a href="/create-account" className="app__create-account">
+          <a href="/signup" className="app__create-account">
             Create an account
           </a>
         </span>

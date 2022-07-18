@@ -3,9 +3,9 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    
   }
 
+  
   .app__resetPassword-form {
     background-color: white;
     flex: 4;
@@ -17,6 +17,7 @@
   }
 
   .app__resetPassword-h2{
+    height:50px;
     font-size: 24px;
     line-height: 24px;
 
@@ -32,27 +33,31 @@
     height: 40px;
     display: block;
     outline: none;
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 8px 0.3rem;
     border-color: lightgray;
     border-top: 0.1rem solid;
     border-bottom: 1px solid;
     margin-top: 10px;
     margin-bottom: 10px;
-  } */
+    color:#C4C4C4
+  } 
 
 
-.app__resetPassword-resetBtn{
+  .app__resetPassword-resetBtn{
     background: linear-gradient(to right, #3146e7, #0a195e); 
     color: white;
-    width:395px;
+    width:407px;
     font-weight: bold;
     height: 48px;
-    margin-top: 20px;
-    border-radius: 5px;
+    margin-top: 30px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+
+
 } 
 
 .app__resetPassword-picture {
@@ -63,3 +68,19 @@
     background-size: cover;
     
   } 
+
+  .isioma{
+    margin-top: 150px;
+   
+  }
+
+  @media only screen and (max-width: 768px) {
+    .app__resetPassword-container {
+      background-color: white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  
