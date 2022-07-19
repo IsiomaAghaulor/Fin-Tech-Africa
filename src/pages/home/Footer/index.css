@@ -67,8 +67,6 @@ letter-spacing: -0.288889px;
 
 @media only screen and (max-width: 500px) {
     .footer-container {
-        /* display: none; */
-        /* width: 100%; */
         padding: 0px;
     }
     .footer-heading_middle{
@@ -94,6 +92,5 @@ letter-spacing: -0.288889px;
     .foot-style{
         width: 100%;
         justify-content: normal;
-        /* align-content: center; */
     }
 }

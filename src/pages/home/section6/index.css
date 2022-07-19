@@ -61,7 +61,8 @@
     padding: 10px;
     font-size: 16px;
     text-align: center;
-    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
     width: 263px;
     height: 58px;
     margin-left: 5px;

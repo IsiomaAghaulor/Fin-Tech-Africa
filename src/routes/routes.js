@@ -32,7 +32,6 @@ export const Routes = () => {
       </RouterCover>
       </AuthState>
     </Router>
-
   );
 };
 export default Routes;
