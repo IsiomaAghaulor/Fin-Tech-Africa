@@ -3,7 +3,7 @@ import "./index.css";
 
 const Section5 = () => {
   return (
-    <div>
+    <div className="section5-container">
       <div>
         <div className="setter-top">
           <h1>Hear from our customers</h1>

@@ -3,7 +3,7 @@ import "./index.css";
 
 const Section6 = () => {
   return (
-    <div>
+    <div className='section6-container'>
         <div className=" mail-container">
             <h1>Subscribe on our Newsletter</h1>
             <p className="lore-p-1">

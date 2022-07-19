@@ -4,21 +4,17 @@ import "./section2.css"
 
 const Section2 = () =>{
     return(
-        <div>
+        <div className="section2-container">
             <div className="section2">
           <section>
             <div className="section2-a">
               <h1>
                 Get the convinience
-                <br /> of transacting with
-                <br /> our services
+                of transacting with
+                 our services
               </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <br /> Feugiat eget ipsum, sed praesent.
-              </p>
-            </div>
-            <div className="section2-b">
+
+                 <div className="section2-b">
               <div>
               <img className="icon30" src="../images/secretfold.svg" alt="" />
                 <p>
@@ -47,6 +43,11 @@ const Section2 = () =>{
                   guaranteed
                 </p>
               </div>
+            </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Feugiat eget ipsum, sed praesent.
+              </p>
             </div>
           </section>
         </div>
