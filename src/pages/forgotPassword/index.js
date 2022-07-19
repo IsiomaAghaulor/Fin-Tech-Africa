@@ -1,16 +1,22 @@
 import React, {useState} from 'react'
 import axios from "axios";
-// import Buttons from '../testRunning/Buttons'
-// import Inputs from '../testRunning/Inputs'
 import "./index.css"
+import { useNavigate } from "react-router-dom";
+
 
 function ForgotPassword() {
 
     const [email, setEmail] = useState("")
 
+    const navigate = useNavigate();
+    const navigateToLogin = () => {
+    navigate("/login");
+  };
+
     const forgotPassword = async() => {
       const response = await axios.post("https://mentorship-payment-app.herokuapp.com/api/v1/forgot-password", {email: email})
       console.log(response)
+
     }
 
     const handleSubmit = (e) => {
@@ -39,11 +45,12 @@ function ForgotPassword() {
             <input type="email" placeholder="Enter your email" className = 'app__forgotPassword-input' value={email} onChange={handleChange}/>
             <button action =''  className = 'app__forgotPassword-resetBtn' name = "Reset Password"> Reset Password </button>
             </form>
-            <button  type="submit" action ='' className = 'app__forgotPassword-backToLoginBtn' name= "Back To Login">Back To Login </button>
+            <button  type= "submit" action = '' className = 'app__forgotPassword-backToLoginBtn' name = "Back To Login"  onClick = {navigateToLogin}> Back To Login </button>
             </div>
          
     </div>
   )
+
 }
 
 export default ForgotPassword;

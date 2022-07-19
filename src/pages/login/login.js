@@ -6,21 +6,26 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
-  // validation
-  // eslint-disable-next-line
+ // eslint-disable-next-line
   const { loading, login } = useAuth();
   const navigate = useNavigate();
 
   const initialValues = { email: "", password: "" };
 
-  // const { dispatch } = useContext(AuthContext);
+ 
   const [formValues, setFormValues] = useState(initialValues);
+
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
+
   const [, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+  };
+
+  const navigateToDashboard = () => {
+    navigate("/dashboard");
   };
 
   const handleSubmit = async (e) => {
@@ -31,13 +36,14 @@ const Login = () => {
       password: formValues.password,
     });
 
-    navigate("/dashboard");
+    navigateToDashboard();
     setIsSubmit(true);
   };
 
   const validate = (values) => {
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     const validEmail = regex.test(values.email);
     console.log(validEmail, values);
 
@@ -59,7 +65,7 @@ const Login = () => {
 
         <h2 className="app__Login-subtitle">Hi, Welcome back</h2>
         {/* <form > */}
-        <div>
+        <div className="app__Login-input-container">
           <div className="inputField">
             <label className="app__Login-Label">Email</label>
             <input
@@ -71,9 +77,7 @@ const Login = () => {
               onChange={handleChange}
             />
 
-            {/* <div className='app__login-icons'>
-          <FontAwesomeIcon icon="fa-solid fa-envelope" />
-          </div> */}
+          
           </div>
 
           <div className="inputField">
@@ -87,9 +91,7 @@ const Login = () => {
               placeholder="🔒 Enter your password"
               onChange={handleChange}
             />
-            {/* <div className='app__login-passwordIcon'>
-          <FontAwesomeIcon icon="fa-solid fa-lock"/>
-          </div> */}
+            
           </div>
         </div>
 
@@ -105,7 +107,7 @@ const Login = () => {
         {/* </form> */}
         <span className="loginSpan">
           Don't have an accout?{" "}
-          <a href="/create-account" className="app__create-account">
+          <a href="/signup" className="app__create-account">
             Create an account
           </a>
         </span>

@@ -13,6 +13,8 @@ import Profile from"../pages/profile/ProfilePage";
 import LocalTransfer from"../pages/localtransfer/LocalTransferPage";
 import AuthState from "../reducers/authState";
 import ResetPassword from "../pages/resetPassword";
+import ForgotPassword from "../pages/forgotPassword";
+import PasswordResetModal from "../pages/resetPassword/PasswordResetModal";
 
 export const Routes = () => {
     //TODO protect the dashboard route.
@@ -28,7 +30,11 @@ export const Routes = () => {
         <Route path='/verifyRegistration' element={< EmailVerification />}/>
         <Route path="/profile" element={<Profile />} />
         <Route path="/transfer" element={<LocalTransfer />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/resetPassword" element={<ResetPassword />} />
+
+        <Route path="/resetPassword/PasswordResetModal" element={<PasswordResetModal />} />
+
       </RouterCover>
       </AuthState>
     </Router>

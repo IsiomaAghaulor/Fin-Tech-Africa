@@ -19,21 +19,6 @@ function OtherBankTransfer() {
     setToggleState(index);
   };
 
-  
-  //call to get all banks
-  // const resolveOtherBanks = (bankCode) => {
-  //   axios({
-  //     method: "POST",
-  //     url: "https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveOtherBank",
-  //     data: { account_number: accountNumber,
-  //        account_bank: bankCode ? bankCode : ""   },
-  //   })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setUsername(response.data.result.data.account_name);
-  //     })
-  //     .catch((error) => console.log(`${error.message}`));
-  // };
 
   useEffect(() => {
     async function getOtherBanks() {
@@ -54,8 +39,7 @@ function OtherBankTransfer() {
     setBankCode(e.target.value);
     if (accountNumber !== "" && accountNumber.length ===10 && bankCode !== ""){
       console.log('acc', accountNumber, 'code', e.target.value,'code selected');
-      //Make api call to fetch the account Details.
-      // resolveOtherBanks(e.target.value);
+      
       apiPost("https://mentorship-payment-app.herokuapp.com/api/v1/transfers/resolveOtherBank", bankCode,false)
     }
   }

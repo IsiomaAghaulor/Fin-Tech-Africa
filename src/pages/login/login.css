@@ -84,8 +84,10 @@
     #4361ee 19.05%,
     #3a0ca3 82.03%,
     #3a0ca3 82.03%
+    
   );
   color: white;
+  border:none;
 }
 
 .fa-solid {
@@ -99,11 +101,24 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .app__Login-container {
-    background-color: white;
+ 
+  .app__Login-details{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    padding-left: 20px;
+  }
+  .app__Login-input-container{
+    width: 100%;
+  }
+  .inputField input{
+    max-width: 85%;
+  }
+  .app__Login-banner{
+    display: none;
+  }
+  .app__login-buttonDiv{
+    width: 90%;
+  }
+  .app__login-buttonDiv .app__login-Button{
+    width: 95%;
   }
 }
