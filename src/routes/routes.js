@@ -4,35 +4,36 @@ import {
   Route,
 } from "react-router-dom";
 import Dashboard from "../pages/dashboard";
-import Login from"../pages/login/login";
+import Login from "../pages/login/login";
 import VerifyEmailRegistration from "../pages/registration/VerifyEmailRegistration";
 import SignUp from "../pages/registration/SignUp";
 import LandingPage from "../pages/home/landingPage";
 import EmailVerification from "../pages/emailVerification/EmailVerification";
-import Profile from"../pages/profile/ProfilePage";
-import LocalTransfer from"../pages/localtransfer/LocalTransferPage";
+import Profile from "../pages/profile/ProfilePage";
+import LocalTransfer from "../pages/localtransfer/LocalTransferPage";
 import AuthState from "../reducers/authState";
 import ResetPassword from "../pages/resetPassword";
+import ForgotPassword from "../pages/forgotPassword";
 
 export const Routes = () => {
-    //TODO protect the dashboard route.
+  //TODO protect the dashboard route.
   return (
     <Router>
       <AuthState>
-      <RouterCover>
-      <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path='/verify-email' element={< VerifyEmailRegistration />}/>
-        <Route path='/signup' element={< SignUp />}/>
-        <Route path='/verifyRegistration' element={< EmailVerification />}/>
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/transfer" element={<LocalTransfer />} />
-        <Route path="/resetPassword" element={<ResetPassword />} />
-      </RouterCover>
+        <RouterCover>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/verify-email" element={<VerifyEmailRegistration />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/verifyRegistration" element={<EmailVerification />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/transfer" element={<LocalTransfer />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+        </RouterCover>
       </AuthState>
     </Router>
-
   );
 };
 export default Routes;

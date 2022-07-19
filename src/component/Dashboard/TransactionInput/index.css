@@ -24,6 +24,10 @@
 
 }
 
+.nav-links .icon{
+    font-size: 1.5rem;
+}
+
 @media (max-width: 568px){
     .search-container {
         display: flex;

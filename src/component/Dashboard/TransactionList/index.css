@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     color: #012A4A;
-    width: 100%;
+    width: 697px;
     height: 48px;
     margin: auto;
     margin-top: 20px;
@@ -88,5 +88,8 @@
     .transaction-history-bottom p{
         color: #979797;
         font-size: 14px;
+    }
+    .note-tag > p {
+        width: auto;
     }
 }

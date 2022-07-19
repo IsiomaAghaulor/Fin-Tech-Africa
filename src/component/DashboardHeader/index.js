@@ -29,12 +29,12 @@ const DashboardHeader = () => {
           <ul className="nav-links">
             {/* {menuItems.map((item) => ( */}
             <li>
-              <NavLink exact={true} className="li sett" to="/">
-                <FiSettings />
+              <NavLink exact={true} className="li sett" to="/setting">
+                <FiSettings className="icon"/>
               </NavLink>
             </li>
             <li>
-              <NavLink exact={true} className="li atBell" to="#">
+              <NavLink exact={true} className="li atBell" to="/notification">
                 <Bell />
                 <span className="sideBadge">
                   <Red />
@@ -42,7 +42,7 @@ const DashboardHeader = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink exact={true} className="li" to="#">
+              <NavLink exact={true} className="li" to="/profile-picture">
                 <Pic />
               </NavLink>
             </li>
