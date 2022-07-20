@@ -51,6 +51,7 @@
     font-weight: bold;
     height: 48px;
     margin-top: 30px;
+    margin-bottom: 10px;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -74,6 +75,7 @@
    
   }
 
+  
   @media only screen and (max-width: 768px) {
     .app__resetPassword-container {
       background-color: white;

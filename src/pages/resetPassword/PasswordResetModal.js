@@ -17,10 +17,10 @@ const PasswordResetModal = () => {
           <h3>
             {" "}
             We sent a password reset link to your email <br />
-            Please clikc the link to reset your password <br />
+            Please click the link to reset your password <br />
             <span>
               Didn’t receive the email?{" "}
-              <a href="/resetPassword" className="app__resend-link">
+              <a href="/forgotPassword" className="app__resend-link">
                 {" "}
                 Click to Resend link
               </a>

@@ -3,8 +3,15 @@ import "./index.css";
 import { useAuth } from "../../reducers/authState";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import {ToastContainer, toast} from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css';
+
 // import { Search } from "@material-ui/icons";
 import "./index.css";
+
+
+// toast.configure();
+
 
 const ResetPassword = () => {
   // eslint-disable-next-line
@@ -14,6 +21,8 @@ const ResetPassword = () => {
 
   const [formValues, setFormValues] = useState(initialValues);
 
+  const notify = () => toast('Reset Password Successful. Click on the link to go back to login');
+  const showError = (message) => toast(message);
 
   const [, setIsSubmit] = useState(false);
 
@@ -32,14 +41,18 @@ const ResetPassword = () => {
         confirmPassword: formValues.confirmPassword,
       }
     );
-    console.log(response);
+    if (response.data.result !== null) {
+      notify();
+    } else {
+      showError(response.data.message)
+    }
+    // console.log(response);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     resetPassword();
-    
     setIsSubmit(true);
   };
   return (
@@ -93,12 +106,23 @@ const ResetPassword = () => {
                 {" "}
                 Reset Password
               </button>
+              <ToastContainer />
             </div>
+            
           </form>
         </div>
+
+        <div>
+        <a href="/login" className = "app__resetPassword-aTag">
+            Back To Login
+          </a>
+        </div>
+
       </div>
 
       <div className="app__resetPassword-picture"> </div>
+
+       
     </div>
   );
 };
