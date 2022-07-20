@@ -80,14 +80,18 @@ const LocalTransferPage = () => {
 
     LocalTransferService.saveTransaction(user, header)
       .then((response) => {
-        addToast("Transfer successfull!!", { appearance: "success" });
-        setUser({
-          accountNumber: "",
-          accountName: "",
-          amount: "",
-          pin: "",
-          narration: "",
-        });
+        if (response.result !== null) {
+          addToast("Transfer successfull!!", { appearance: "success" });
+          setUser({
+            accountNumber: "",
+            accountName: "",
+            amount: "",
+            pin: "",
+            narration: "",
+          });
+        } else {
+          addToast(response.message, "error");
+        }
       })
       .catch((error) => {
         console.log(error);

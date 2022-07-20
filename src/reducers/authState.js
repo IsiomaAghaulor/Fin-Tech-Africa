@@ -40,6 +40,7 @@ const AuthState = ({ children }) => {
         false
       );
       localStorage.setItem("accessToken", response.data.result.accessToken);
+      
       const { exp } = jwt_decode(response.data.result.accessToken);
       dispatch({
         type: LOGIN_SUCCESS,

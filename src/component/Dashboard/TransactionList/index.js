@@ -9,8 +9,7 @@ import { Navigate } from "react-router-dom";
 export const TransactionList = () => {
   const [values, setValues] = useState([]);
   const token = localStorage.getItem("accessToken");
-  // const [ currentPage, setCurrentPage] = useState([1]);
-  // const [ postsPerPage, setPostsPerpage] = useState([7]);
+  // const [ currentPage, setCurrentPage] = useState(0);
   if (!token) {
     Navigate("/signin");
   }
