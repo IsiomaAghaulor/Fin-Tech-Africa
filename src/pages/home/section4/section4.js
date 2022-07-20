@@ -3,7 +3,7 @@ import "./section4.css";
 
 const Section4 = () => {
   return (
-    <div>
+    <div className="section4-container">
       <div className="section4">
         <section>
           <div className="section4-a">
