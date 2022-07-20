@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import jwt_decode from 'jwt-decode';
+import jwt_decode from "jwt-decode";
 import AuthContext from "./authContext";
 import AuthReducer from "./authReducer";
 import {
@@ -12,26 +12,24 @@ import {
     RESET_PASSWORD_FAIL,
     RESET_PASSWORD_SUCCESS
 } from "./types";
-
 import { apiPost } from "../utils/apiHelper";
+
 const AuthState = ({ children }) => {
-    const initialState = {
-        token: localStorage?.getItem('accessToken'),
-        isAuthenticated: localStorage?.getItem('accessToken') 
-        ? true : 
-        false,
-        loading: false,
-        user: null,
-        error: null,
-    };
-    const [state, dispatch] = useReducer(AuthReducer, initialState);
-   
-    const config = {
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-        }
-    };
+  const initialState = {
+    token: localStorage.getItem("accessToken"),
+    isAuthenticated: localStorage?.getItem("accessToken") ? true : false,
+    loading: false,
+    user: null,
+    error: null,
+  };
+  const [state, dispatch] = useReducer(AuthReducer, initialState);
+
+  const config = {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  };
 
     const login = async (formData) => {
         dispatch({
@@ -122,10 +120,10 @@ const AuthState = ({ children }) => {
     )
 }
 export const useAuth = () => {
-    const context = useContext(AuthContext);
-    if(context === undefined ){
-        throw new Error("UseAuth must be used in an AuthProvider");
-    }
-    return context;
-}
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error("UseAuth must be used in an AuthProvider");
+  }
+  return context;
+};
 export default AuthState;

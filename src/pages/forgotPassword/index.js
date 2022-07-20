@@ -4,9 +4,7 @@ import "./index.css"
 import { useNavigate } from "react-router-dom";
 import { useToasts} from "react-toast-notifications"
 
-
 function ForgotPassword() {
-
     const [email, setEmail] = useState("")
 
     const { addToast } = useToasts();
@@ -17,7 +15,6 @@ function ForgotPassword() {
   };
 
    const navigateToModal = () => {
-    //  navigate("/resetPassword/PasswordResetModal");
     navigate("/resetPassword/PasswordResetModal");
    };
 
@@ -29,17 +26,13 @@ function ForgotPassword() {
         addToast(response.data.message, { appearance: "error"})
       }
       console.log(response)
-
     }
-
     const handleSubmit = (e) => {
       e.preventDefault()
       forgotPassword()
     }
-
     const  handleChange = (e) => {
       setEmail(e.target.value)
-
     }
   return (
     <div className='app__forgotPassword-parent'>
@@ -49,23 +42,16 @@ function ForgotPassword() {
                 send an email with instructions to reset your password
             </p>
         </div>
-           
-    
             {/* <input type="text" placeholder= 'Enter your email' className = 'app__forgotPassword-input' title = "Email"  icon = "fa-solid fa-envelope"> </input> */}
             <label>Email</label>
-            <div className="flex-align">   
+            <div className="flex-align">
             <form onSubmit={handleSubmit}>
             <input type="email" placeholder="Enter your email" className = 'app__forgotPassword-input' value={email} onChange={handleChange}/>
             <button action = ''  className = 'app__forgotPassword-resetBtn' name = "Reset Password" onClick = {navigateToModal}> Reset Password </button>
             </form>
             <button  type= "submit" action = '' className = 'app__forgotPassword-backToLoginBtn' name = "Back To Login"  onClick = {navigateToLogin}> Back To Login </button>
             </div>
-         
     </div>
   )
-
 }
-
 export default ForgotPassword;
-
-

@@ -95,7 +95,7 @@ const Login = () => {
           </div>
         </div>
 
-        <a href="/forgot-password" className="app__forgotPassword">
+        <a href="/forgotPassword" className="app__forgotPassword">
           Forgot password?
         </a>
 
