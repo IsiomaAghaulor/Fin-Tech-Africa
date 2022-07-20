@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
+// import  Pagination  from "./Pagination";
 import axios from "axios";
 import { ReactComponent as FirstBank } from "./images/newfirstb.svg";
 import { Navigate } from "react-router-dom";
 
+
 export const TransactionList = () => {
   const [values, setValues] = useState([]);
   const token = localStorage.getItem("accessToken");
+  // const [ currentPage, setCurrentPage] = useState(0);
   if (!token) {
     Navigate("/signin");
   }
@@ -34,6 +37,9 @@ export const TransactionList = () => {
 
     // eslint-disable-next-line
   }, []);
+  // const indexOfLastPost = currentPage * postsPerPage;
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // const currentPost = values.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
     <>
@@ -58,6 +64,7 @@ export const TransactionList = () => {
             </div>
           </div>
         );
+        // <Pagination />
       })}
     </>
   );

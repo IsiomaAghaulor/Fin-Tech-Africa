@@ -67,3 +67,42 @@
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 568px) {
+    .transaction--head{
+        background-image: url(./images/Background.svg);
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 400px 250px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: 206px;
+        flex-direction: row;
+        color: #012A4A;
+    }
+
+    .transaction-body h1{
+        font-size: 20px;
+    }
+
+    .wallet{
+        width: 55px;
+        height: 55px;
+    }
+
+    .wallet .wallet-group{
+        font-size: 1.5rem;
+    }
+
+    .row-effect .icon-account{
+        font-size: 2rem;
+        
+    }
+
+}

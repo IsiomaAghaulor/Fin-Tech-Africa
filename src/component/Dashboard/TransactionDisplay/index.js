@@ -21,8 +21,8 @@ export const TransactionDisplay = () => {
   console.log("this is the logged in token: " + token);
 
   useEffect(() => {
-    // eslint-disable-next-line no-unused-vars
-    const response = axios
+    // eslint-disable-next-line
+    axios
       .get("https://mentorship-payment-app.herokuapp.com/api/v1/wallet", {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -35,7 +35,8 @@ export const TransactionDisplay = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [token]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -46,7 +47,8 @@ export const TransactionDisplay = () => {
           </div>
           <div className="transaction-body">
             <p>Account Balance</p>
-            <h1>{`${showBalance ? "*******" : values.balance}`}</h1>
+
+            <h1>{ values.balance ? `${showBalance ? "*******" : values.balance}` : "Loading..."}</h1>
             <p>{values.bankName}</p>
             <div className="row-effect">
               <div>
@@ -56,13 +58,16 @@ export const TransactionDisplay = () => {
             </div>
           </div>
         </div>
+        {values.bankName && (     
         <div className="eye-image" onClick={toggleBalance}>
+      
           {showBalance ? (
             <BsEyeSlash className="eyeicons" />
           ) : (
             <BsEye className="eyeicons" />
           )}
         </div>
+            )}
       </div>
     </>
   );
