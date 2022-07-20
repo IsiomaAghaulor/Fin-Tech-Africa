@@ -2,15 +2,29 @@ import React, {useState} from 'react'
 import axios from "axios";
 import "./index.css"
 import { useNavigate } from "react-router-dom";
+import { useToasts} from "react-toast-notifications"
 
 function ForgotPassword() {
     const [email, setEmail] = useState("")
+
+    const { addToast } = useToasts();
+
     const navigate = useNavigate();
     const navigateToLogin = () => {
     navigate("/login");
   };
+
+   const navigateToModal = () => {
+    navigate("/resetPassword/PasswordResetModal");
+   };
+
     const forgotPassword = async() => {
       const response = await axios.post("https://mentorship-payment-app.herokuapp.com/api/v1/forgot-password", {email: email})
+      if (response.data.result !== null) {
+        addToast("Password reset link sent to your email", { appearance: "success"})
+      } else {
+        addToast(response.data.message, { appearance: "error"})
+      }
       console.log(response)
     }
     const handleSubmit = (e) => {
@@ -33,7 +47,7 @@ function ForgotPassword() {
             <div className="flex-align">
             <form onSubmit={handleSubmit}>
             <input type="email" placeholder="Enter your email" className = 'app__forgotPassword-input' value={email} onChange={handleChange}/>
-            <button action =''  className = 'app__forgotPassword-resetBtn' name = "Reset Password"> Reset Password </button>
+            <button action = ''  className = 'app__forgotPassword-resetBtn' name = "Reset Password" onClick = {navigateToModal}> Reset Password </button>
             </form>
             <button  type= "submit" action = '' className = 'app__forgotPassword-backToLoginBtn' name = "Back To Login"  onClick = {navigateToLogin}> Back To Login </button>
             </div>

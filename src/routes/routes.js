@@ -15,6 +15,7 @@ import AuthState from "../reducers/authState";
 import ResetPassword from "../pages/resetPassword";
 import ForgotPassword from "../pages/forgotPassword";
 import PasswordResetModal from "../pages/resetPassword/PasswordResetModal";
+import OtherBankTransfer from "../pages/otherTransfer/OtherBankTransfer";
 
 export const Routes = () => {
   //TODO protect the dashboard route.

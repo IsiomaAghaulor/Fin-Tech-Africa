@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
+import "./otherBank.css";
 import axios from "axios";
 import SelectDropdown from "../../component/SelectDropdown/SelectDropdown";
+import { apiPost } from "../../utils/apiHelper";
 
 
 function OtherBankTransfer() {
@@ -83,6 +84,13 @@ function OtherBankTransfer() {
   return (
     <div className="app__OtherBankTransfer-container">
       <div className="app__OtherBankTransfer-tabs">
+
+        <div
+          className={toggleState === 1 ? "tab activeTab" : "tab"}
+          onClick={() => toggleTab(2)}
+        >
+          Local Bank Transfer
+        </div>
         
         <div
           className={toggleState === 1 ? "tab activeTab" : "tab"}
@@ -96,7 +104,7 @@ function OtherBankTransfer() {
        
 
         <div
-          className={toggleState === 2 ? "content active-content" : "content"}
+          className="content active-content"
         >
           <p></p>
 
