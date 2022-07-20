@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import axios from "axios";
 import "./index.css"
 import { useNavigate } from "react-router-dom";
+
 function ForgotPassword() {
     const [email, setEmail] = useState("")
     const navigate = useNavigate();
@@ -40,5 +41,3 @@ function ForgotPassword() {
   )
 }
 export default ForgotPassword;
-
-
