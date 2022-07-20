@@ -10,6 +10,7 @@ import {
   LOGOUT_FAIL,
 } from "./types";
 import { apiPost } from "../utils/apiHelper";
+
 const AuthState = ({ children }) => {
   const initialState = {
     token: localStorage.getItem("accessToken"),
