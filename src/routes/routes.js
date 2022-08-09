@@ -14,24 +14,27 @@ import LocalTransfer from "../pages/localtransfer/LocalTransferPage";
 import AuthState from "../reducers/authState";
 import ResetPassword from "../pages/resetPassword";
 import ForgotPassword from "../pages/forgotPassword";
+import PasswordResetModal from "../pages/resetPassword/PasswordResetModal";
+import OtherBankTransfer from "../pages/otherTransfer/OtherBankTransfer";
 
 export const Routes = () => {
   //TODO protect the dashboard route.
   return (
     <Router>
       <AuthState>
-        <RouterCover>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/verify-email" element={<VerifyEmailRegistration />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/verifyRegistration" element={<EmailVerification />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/transfer" element={<LocalTransfer />} />
-          <Route path="/resetPassword" element={<ResetPassword />} />
-          <Route path="/forgotPassword" element={<ForgotPassword />} />
-        </RouterCover>
+      <RouterCover>
+      <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path='/verify-email' element={< VerifyEmailRegistration />}/>
+        <Route path='/signup' element={< SignUp />}/>
+        <Route path='/verifyRegistration' element={< EmailVerification />}/>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/transfer" element={<LocalTransfer />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route path="/resetPassword/PasswordResetModal" element={<PasswordResetModal />} />
+      </RouterCover>
       </AuthState>
     </Router>
   );

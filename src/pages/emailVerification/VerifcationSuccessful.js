@@ -21,7 +21,7 @@ const VerifcationSuccessful = () => {
           <br /> click the button below
           <br /> to login and start enjoying Fintech
         </p>
-        <button id="verify-button" onClick={navigateToLogin}>
+        <button id = "verify-button" onClick={navigateToLogin}>
           Login
         </button>
       </div>
