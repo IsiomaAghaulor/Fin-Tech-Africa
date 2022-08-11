@@ -10,6 +10,7 @@ function OtherBankTransfer() {
   const [banks, setBanks] = useState([]);
   const [bankCode, setBankCode] = useState("");
   const [accountNumber, setAccountNumber] = useState([""]);
+  // eslint-disable-next-line
   const [userName, setUsername] = useState("");
   const [pin, setPin] = useState("");
   const [amount, setAmount] = useState("");
